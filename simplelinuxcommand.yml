@@ -1,0 +1,30 @@
+
+---
+- hosts: localhost
+  tasks:  
+    - name: list present working directory
+      shell: pwd
+      register: output
+    - name: list directory 
+      shell: ls
+    - name: mkdir 
+      shell: mkdir testing 
+    - name: add text into testing
+      shell: echo "hi there" > file.txt
+    - name: rename file.txt
+      shell: mv file.txt file2.txt
+    - name: move file2.txt to testing
+      shell: mv file2.txt testing
+    
+
+      
+   
+
+
+
+   
+   
+
+   
+    
+             
