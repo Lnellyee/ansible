@@ -1,0 +1,7 @@
+# hosts-dev
+
+[xyz]
+target1 ansible_host=192.168.1.145 ansible_connection=ssh ansible_user=nelly ansible_port=22 ansible_ssh_pass=mysshpassword
+
+[envlocal]
+localhost ansible_connection=local

@@ -1,0 +1,20 @@
+---
+- hosts: xyz
+  vars: 
+    users:
+      - username: "user a"
+      - username: "user z"  
+    tasks:
+     - name: create group
+       shell: sudo useradd devops 
+       state: present
+     - name: add user {{ item.username }}
+       create_home: yes
+       comment: "created devops"
+       groups: devops
+    with_items: "{{ users }}"
+ 
+
+
+
+  
